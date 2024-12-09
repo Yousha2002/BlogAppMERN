@@ -70,7 +70,7 @@ import { BsSearch } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
 import { useContext, useState } from "react";
 import Menu from "./Menu";
-import { UserContext } from "../context/UserContext";
+import { UserContext } from "../Context/UserContext";
 
 const Navbar = () => {
   const [prompt, setPrompt] = useState("");
