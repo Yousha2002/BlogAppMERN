@@ -97,8 +97,8 @@ app.use(express.json());
 app.use(cookieParser()); // Add cookie parser middleware
 
 // Middleware for CORS
-app.use(cors());
-
+// app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 // Ensure that the 'images' directory exists
 const imagesDir = path.join(__dirname, "/images");
 if (!fs.existsSync(imagesDir)) {
