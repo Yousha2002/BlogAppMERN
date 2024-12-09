@@ -1,21 +1,21 @@
 {
-  "version":2,
+  "version": 2,
   "builds": [
-    { "src": "*.js", "use": "@vercel/node" }
+    {
+      "src": "*.js",
+      "use": "@vercel/node"
+    }
   ],
+  "functions": {
+    "api/*": {
+      "maxDuration": 60
+    }
+  },
   "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/",
-        "methods": [
-          "GET",
-          "POST",
-          "PUT",
-          "PATCH",
-          "DELETE",
-          "OPTIONS"
-      ]
-      }
+    {
+      "src": "/(.*)",
+      "dest": "/",
+      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
+    }
   ]
 }
-  
